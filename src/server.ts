@@ -7,10 +7,6 @@ import Nfs from "./nfs";
 function cleanupPath(path: string) {
     if (!path) return path;
 
-    if (path.startsWith("/")) {
-        path = path.substring(1);
-    }
-
     if (path.endsWith("/")) {
         path = path.substring(0, path.length - 2);
     }
