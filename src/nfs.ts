@@ -65,8 +65,8 @@ export default class Nfs {
         
         let device = `${this.options.server}:${this.options.path}`;
         
-        if(!this.options.path.startsWith("/)){
-           device = this.options.server + ":/" + this.options.path;              
+        if(!this.options.path.startsWith("/")){
+            device = `${this.options.server}:/${this.options.path}`;           
         }
 
         fs.mkdirSync(mountPoint, { recursive: true });
