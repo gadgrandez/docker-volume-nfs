@@ -9,7 +9,7 @@ only one share to the docker hosts and `docker volume create` or volume definiti
 Install with:
 
 ```
-% docker plugin install robkaandorp/nfs NFS_SERVER="192.168.1.2" NFS_PATH="/exported/path/from/nfs/server" NFS_MOUNT_OPTS="noatime,rw"
+% docker plugin install gadgrandez/nfs NFS_SERVER="192.168.1.2" NFS_PATH="/exported/path/from/nfs/server" NFS_MOUNT_OPTS="noatime,rw"
 ```
 
 where NFS_MOUNT_OPTS is optional.
