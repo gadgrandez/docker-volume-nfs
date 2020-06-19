@@ -62,7 +62,12 @@ export default class Nfs {
 
     async mount(): Promise<void> {
         const mountPoint = this.getMountPoint("");
-        const device = `${this.options.server}:${this.options.path}`;
+        
+        let device = `${this.options.server}:${this.options.path}`;
+        
+        if(!this.options.path.startsWith("/)){
+           device = this.options.server + ":/" + this.options.path;              
+        }
 
         fs.mkdirSync(mountPoint, { recursive: true });
     
