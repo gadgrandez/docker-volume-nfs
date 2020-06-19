@@ -1,6 +1,6 @@
 {
 	"description": "NFS plugin for Docker",
-	"documentation": "https://github.com/robkaandorp/docker-volume-nfs",
+	"documentation": "https://github.com/gadgrandez/docker-volume-nfs",
     "entrypoint": ["/app/entrypoint.sh"],
     "env": [
         {
